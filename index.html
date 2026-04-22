@@ -19,12 +19,27 @@
         </select>
       </label>
       <br />
-      <button type="submit">Check Answer</button>
+      <button type="submit">Check Answer </button>
     </form>
-    <div id="result"></div>
+    <div id="result">
+      
+
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+$("#trivia-form").on("submit",function(event){
+event.preventDefault();
+var $answer = $("#trivia-answer");
+var answer = $answer.val();
+
+if (answer == 'hall') {
+$("#result").text("yay");
+} else {
+$("#result").text("womp womp");
+}
+
+});
 
 
 
